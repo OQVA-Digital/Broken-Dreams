@@ -1,0 +1,33 @@
+---
+
+---
+
+
+
+<section class="about_section">
+    <div class="base_width">
+        <img src="/logo/logo-color.svg" class="logo" alt="Broken Dreams Logo">
+    </div>
+</section>
+
+
+<style>
+    .about_section {
+        background-color: rgb(239 233 217 / 85%);
+        backdrop-filter: blur(0.5rem);
+    }
+
+    .about_section .base_width {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding-block: 4rem;
+        height: clamp(10rem, 50vw, 40rem);
+    }
+
+    .logo {
+        width: clamp(10rem, 65vw, 30rem);
+    }
+</style>

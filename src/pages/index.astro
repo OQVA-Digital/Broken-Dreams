@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from "astro:assets"
+import Bg from "../assets/van-bgs/home.png"
+
+import '../styles/slide_page.css'
+
+import LogoSection from '../components/LogoSection.astro';
+
+---
+
+<Layout title="Broken Dreams Coffee Co.">
+
+	<div class="bg_ctnr">
+		<Image src={Bg} alt="" class="bg reveal_bg" />
+	</div>
+
+	<main>
+		<section class="intro">
+			<div class="base_width">
+				<div class="content">
+					<h1 class="reveal_steps1">Every Sip Tells a Story</h1>
+	
+					<p class="reveal_steps1">At Broken Dreams, our mobile cafes are more than just a pit-stop for your daily caffeine fix. They are the crossroads where authenticity meets aspiration. We believe a cup of coffee should stir the soul, not just the senses. Every one of our baristas is an artist, a musician, an actor—a dreamer.</p>
+					
+					<a href="/dream-with-us" class="cta reveal_steps1">Dream with us</a>
+
+					<a href="/contact" class="secondary reveal_steps1">Contact us</a>
+				</div>
+			</div>
+		</section>
+		<LogoSection/>
+	</main>
+</Layout>
+
+<style>
+	.intro .base_width .content {
+		width: clamp(10rem, 85vw, 66rem);
+		text-align: left;
+	}
+</style>

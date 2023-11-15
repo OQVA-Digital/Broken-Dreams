@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from "astro:assets"
+import Bg from "../assets/van-bgs/taste.png"
+
+import '../styles/slide_page.css'
+
+const anim = {
+  old: {
+    name: 'fadeIn',
+    duration: '0.2s',
+    easing: 'linear',
+    fillMode: 'forwards',
+  },
+  new: {
+    name: 'fadeOut',
+    duration: '0.3s',
+    easing: 'linear',
+    fillMode: 'backwards',
+  }
+};
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+};
+
+---
+
+<Layout title="Taste Authenticity with Broken Dreams">
+	<main>
+		<section class="intro">
+			<div class="bg_ctnr">
+				<Image src={Bg} alt="" class="bg reveal_bg" />
+			</div>
+
+			<div class="base_width reveal">
+				<div class="flex">
+					<div class="content">
+						<h1 class="reveal_steps1">Taste Authenticity</h1>
+		
+						<p class="reveal_steps1">Your choice of coffee shop is about more than taste. It's about supporting the heartbeat of dreams. It's about knowing that behind every order, there's a story waiting to be told. And with every sip, you're listening.</p>
+					
+						<a href="/contact" class="cta reveal_steps1">Contact us</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	
+
+</style>

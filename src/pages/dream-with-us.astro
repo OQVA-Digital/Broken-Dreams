@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from "astro:assets"
+import Bg from "../assets/van-bgs/dream.png"
+
+import '../styles/slide_page.css'
+
+const anim = {
+  old: {
+    name: 'fadeIn',
+    duration: '0.2s',
+    easing: 'linear',
+    fillMode: 'forwards',
+  },
+  new: {
+    name: 'fadeOut',
+    duration: '0.3s',
+    easing: 'linear',
+    fillMode: 'backwards',
+  }
+};
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+};
+
+---
+
+<Layout title="Dream With Broken Dreams">
+	<main>
+		<section class="intro">
+			<div class="bg_ctnr">
+				<Image src={Bg} alt="" class="bg reveal_bg" />
+			</div>
+
+			<div class="base_width reveal">
+				<div class="flex">
+					<div class="content">
+						<h1 class="reveal_steps1">Dream With Us</h1>
+		
+						<p class="reveal_steps1">Our vans roll through the streets, but our dreams soar beyond the skyline. Each latte served comes with a tale. Learn about who's pouring your brew... From life's reroutes to uncharted trails, our team's dreams are woven into our community.</p>
+					
+						<a href="/taste-authenticity" class="cta reveal_steps1">Taste The Authenticity</a>
+					</div>
+	
+					<ul class="bullet_boxes">
+						<li class="reveal_steps2">
+							<h2>Talent on Wheels</h2>
+	
+							<p>Scan the QR codes on our vans to uncover melodies and canvases crafted by our multi-talented crew.</p>
+						</li>
+	
+						<li class="reveal_steps2">
+							<h2>Mic Under the Moon</h2>
+	
+							<p>Join us at our next open mic or art showcase where our parking spot becomes the stage.</p>
+						</li>
+	
+						<li class="reveal_steps2">
+							<h2>Art in Your Hands</h2>
+	
+							<p>Carry a piece of passion with our exclusive merchandise, from T-shirts with a touch of poetry to totes that carry a dream.</p>
+						</li>
+	
+						<li class="reveal_steps2">
+							<h2>Dream Together</h2>
+	
+							<p>Share your own journey with us. Connect over cups and stories, and become part of the Broken Dreams community.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.intro .content {
+    	max-width: 53rem;
+	}
+	.intro .flex {
+    	flex-flow: row wrap;
+		justify-content: space-between;
+    	gap: 5rem;
+	}
+
+	.bullet_boxes {
+		flex: 1;
+		display: flex;
+		flex-flow: row wrap;
+		font-size: 1.7rem;
+		max-width: 70rem;
+		gap: 2rem;
+    	align-content: flex-start;
+		margin-bottom: 5rem;
+	}
+
+	.bullet_boxes li {
+		background-color: rgb(223 222 203 / 95%);
+		padding: clamp(1.5rem,7vw,2.5rem) clamp(1.5rem,8vw,3rem) clamp(1.5rem,8vw,3rem);
+		min-width: clamp(16rem,75vw,20rem);
+		flex: 1;
+		border: 0.1rem solid var(--c2-a);
+		border-radius: 0.5rem;
+		box-shadow: 0 1rem 2rem -1rem var(--dark);
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+	}
+
+	.bullet_boxes li h2 {
+		font-weight: 650;
+		color: var(--c2-b);
+		font-size: clamp(2.6rem, 12vw, 4.9rem);
+		line-height: 1;
+	}
+
+	.bullet_boxes li p {
+		font-size: clamp(1rem,4.5vw,1.45rem);
+		line-height: 1.5;
+		font-weight: 500;
+    	color: var(--c2);
+	}
+
+</style>
