@@ -16,20 +16,28 @@ import OQVABadge from '../components/OQVABadge.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, } from "../consts";
 
+import { slide } from 'astro:transitions';
+
+
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
+
+	<ViewTransitions />
 	<BaseHead title={title ? title : SITE_TITLE} description={description ? description : SITE_DESCRIPTION}/>
 	<body>
-		<Header/>
+		<Header transition:persist/>
 
-		<slot />
+		<main transition:animate={slide({ duration: '1s' })}>
+			<slot />
+		</main>
 
 		<!-- <Footer/> -->
 	</body>
 
 	<!-- <CookieConsentBanner></CookieConsentBanner> -->
 
-	<OQVABadge/>
+	<!-- <OQVABadge/> -->
 </html>

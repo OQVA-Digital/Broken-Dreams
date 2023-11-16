@@ -20,7 +20,6 @@ interface ScrollRevealObject {
 declare global {
   function ScrollReveal(): ScrollRevealObject;
 }
-
 ---
 
 <script is:inline>
@@ -40,43 +39,7 @@ declare global {
     }
 </script>
 
-<script is:inline src="/scripts/scrollreveal.min.js"></script>
-
-<script>
-    ScrollReveal().reveal('.reveal', {
-        distance: '1rem',
-        origin: 'bottom',
-        opacity: 0,
-        duration:900,
-        easing: 'ease',
-    });
-
-    ScrollReveal().reveal('.reveal_bg', {
-        distance: '4rem',
-        origin: 'left',
-        opacity: 0,
-        duration:2200,
-        easing: 'ease',
-    });
-
-    ScrollReveal().reveal('.reveal_steps1', {
-        distance: '50px',
-        origin: 'bottom',
-        opacity: 0,
-        duration:900,
-        easing: 'ease',
-        interval:100
-    });
-
-    ScrollReveal().reveal('.reveal_steps2', {
-        distance: '1rem',
-        origin: 'bottom',
-        opacity: 0,
-        duration:1300,
-        easing: 'ease',
-        interval:100
-    });
-</script>
+<script src="../scripts/scrollreveal.min.js"></script>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
@@ -103,3 +66,9 @@ declare global {
 <meta property="twitter:title" content={title} />
 <!-- <meta property="twitter:description" content={SITE_DESCRIPTION} />
 <meta property="twitter:image" content={OG_IMAGE} /> -->
+
+<!-- <script>
+	document.addEventListener('astro:page-load', () => {
+        
+	}, { once: false });
+</script> -->

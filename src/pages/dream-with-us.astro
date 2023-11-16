@@ -29,57 +29,64 @@ const myFade = {
 ---
 
 <Layout title="Dream With Broken Dreams">
-	<main>
-		<section class="intro">
-			<div class="bg_ctnr">
-				<Image src={Bg} alt="" class="bg reveal_bg" />
-			</div>
+	<section class="intro">
+		<div class="bg_ctnr">
+			<Image src={Bg} alt="" class="bg reveal_bg" />
+		</div>
 
-			<div class="base_width reveal">
-				<div class="flex">
-					<div class="content">
-						<h1 class="reveal_steps1">Dream With Us</h1>
-		
-						<p class="reveal_steps1">Our vans roll through the streets, but our dreams soar beyond the skyline. Each latte served comes with a tale. Learn about who's pouring your brew... From life's reroutes to uncharted trails, our team's dreams are woven into our community.</p>
-					
-						<a href="/taste-authenticity" class="cta reveal_steps1">Taste The Authenticity</a>
-					</div>
+		<div class="base_width reveal">
+			<div class="flex">
+				<div class="content">
+					<h1 class="reveal_steps1">Dream With Us</h1>
 	
-					<ul class="bullet_boxes">
-						<li class="reveal_steps2">
-							<h2>Talent on Wheels</h2>
-	
-							<p>Scan the QR codes on our vans to uncover melodies and canvases crafted by our multi-talented crew.</p>
-						</li>
-	
-						<li class="reveal_steps2">
-							<h2>Mic Under the Moon</h2>
-	
-							<p>Join us at our next open mic or art showcase where our parking spot becomes the stage.</p>
-						</li>
-	
-						<li class="reveal_steps2">
-							<h2>Art in Your Hands</h2>
-	
-							<p>Carry a piece of passion with our exclusive merchandise, from T-shirts with a touch of poetry to totes that carry a dream.</p>
-						</li>
-	
-						<li class="reveal_steps2">
-							<h2>Dream Together</h2>
-	
-							<p>Share your own journey with us. Connect over cups and stories, and become part of the Broken Dreams community.</p>
-						</li>
-					</ul>
+					<p class="reveal_steps1">Our vans roll through the streets, but our dreams soar beyond the skyline. <b>Each latte served comes with a tale.</b> Learn about who's pouring your brew... <b>From life's reroutes to uncharted trails, our team's dreams are woven into our community.</b></p>
+				
+					<a href="/taste-authenticity" class="cta reveal_steps1">Taste The Authenticity</a>
+
+					<a href="/contact" class="secondary reveal_steps1">Contact us</a>
+
+					<hr class="reveal_steps1">
 				</div>
+
+				<ul class="bullet_boxes">
+					<li class="reveal_steps2">
+						<h2>Talent on Wheels</h2>
+
+						<p>Scan the <b>QR codes</b> on our vans to uncover <b>melodies and canvases</b> crafted by our multi-talented crew.</p>
+					</li>
+
+					<li class="reveal_steps2">
+						<h2>Mic Under the Moon</h2>
+
+						<p>Join us at our next <b>open mic</b> or <b>art showcase</b> where our parking spot becomes the stage.</p>
+					</li>
+
+					<li class="reveal_steps2">
+						<h2>Art in Your Hands</h2>
+
+						<p>Carry a piece of passion with our exclusive merchandise, from <b>T-shirts</b> with a touch of <b>poetry</b> to totes that carry a dream.</p>
+					</li>
+
+					<li class="reveal_steps2">
+						<h2>Dream Together</h2>
+
+						<p><b>Share your own journey with us.</b> Connect over cups and stories, and become part of the Broken Dreams community.</p>
+					</li>
+				</ul>
 			</div>
-		</section>
-	</main>
+		</div>
+	</section>
 </Layout>
 
 <style>
+	h1 {
+    	font-size: clamp(1rem,18vw,12rem);
+	}
+
 	.intro .content {
     	max-width: 53rem;
 	}
+
 	.intro .flex {
     	flex-flow: row wrap;
 		justify-content: space-between;
@@ -98,7 +105,7 @@ const myFade = {
 	}
 
 	.bullet_boxes li {
-		background-color: rgb(223 222 203 / 95%);
+    	background-color: rgb(255 237 189 / 90%);
 		padding: clamp(1.5rem,7vw,2.5rem) clamp(1.5rem,8vw,3rem) clamp(1.5rem,8vw,3rem);
 		min-width: clamp(16rem,75vw,20rem);
 		flex: 1;
@@ -124,4 +131,9 @@ const myFade = {
     	color: var(--c2);
 	}
 
+	.bullet_boxes li b {
+		color: var(--c2-a);
+		font-weight: 700;
+	}
+=
 </style>
