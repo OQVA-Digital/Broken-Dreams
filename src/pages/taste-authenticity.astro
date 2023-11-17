@@ -41,12 +41,14 @@ const myFade = {
 	
 					<p class="reveal_steps1"><b>Your choice of coffee shop is about more than taste.</b> It's about supporting the heartbeat of dreams. It's about knowing that behind every order, there's a story waiting to be told. <b>And with every sip, you're listening.</b></p>
 				
-					<a href="/contact" class="cta reveal_steps1">Savor the dream</a>
+					<a href="/savor-the-dream" class="cta reveal_steps1">Savor the dream</a>
 				
 					<a href="/contact" class="secondary reveal_steps1">Contact us</a>
 
 					<hr class="reveal_steps1">
+				</div>
 
+				<div class="partners reveal_steps1">
 					<h2>Our Partners</h2>
 
 					<p>We're proud to partner with local creatives and venues, forging paths for dreams to be seen and heard. Check out our current collaborations and how you can be part of these.</p>
@@ -61,6 +63,31 @@ const myFade = {
 	h1 {
     	font-size: clamp(1rem,15vw,12rem);
 		max-width: 75rem;
+	}
+
+	.base_width .flex {
+		flex-flow: row wrap;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.partners {
+		flex: 1;
+		min-width: 20rem;
+		max-width: 32rem;
+		text-align: right;
+	}
+
+	.partners h2 {
+    	font-size: clamp(1.5rem, 9.5vw, 3.5rem);
+		font-weight: 500;
+    	width: auto;
+	}
+
+	.partners p {
+		font-size: clamp(1rem, 4.2vw, 1.75rem);
+		line-height: 1.65;
+		font-weight: 300;
 	}
 
 </style>

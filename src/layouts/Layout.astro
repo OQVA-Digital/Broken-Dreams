@@ -23,14 +23,14 @@ import { ViewTransitions } from 'astro:transitions';
 const slideAnimation = {
   old: {
     name: "slideOut", // same name as the keyframe in layouts/Main
-    duration: "0.7s",
-    easing: "linear",
+    duration: "0.8s",
+    easing: "ease",
     fillMode: "forwards",
   },
   new: {
     name: "slideIn",
-    duration: "0.7s",
-    easing: "linear",
+    duration: "1s",
+    easing: "ease",
     fillMode: "backwards",
   },
 };
@@ -43,15 +43,11 @@ const bounce = {
 
 <!doctype html>
 <html lang="en">
-
 	<ViewTransitions />
+	
 	<BaseHead title={title ? title : SITE_TITLE} description={description ? description : SITE_DESCRIPTION}/>
 	<body>
 		<Header transition:persist/>
-
-		<div class="gradient_bg">
-			
-		</div>
 
 		<main transition:animate={bounce}>
 			<slot />
@@ -70,9 +66,11 @@ const bounce = {
 		0% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			transform: translate3d(0, 0, 0);
+			opacity: 1;
 		} 100% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			transform: translate3d(-100vw, 0, 0);
+			opacity: 0;
 		}
 	}
 
