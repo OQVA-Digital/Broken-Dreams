@@ -17,12 +17,15 @@ import Social from '../components/Social.astro';
 		<div class="main base_width">
 			<div class="content reveal_steps1">
 				<h1>Follow the Journey</h1>
-
-				<p>[BLOG POSTS HERE]</p>
 				
 				<Social/>
 
-				<hr>
+				<div class="blog_posts">
+					<div class="card reveal_steps2"></div>
+					<div class="card reveal_steps2"></div>
+					<div class="card reveal_steps2"></div>
+					<div class="card reveal_steps2"></div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -32,5 +35,20 @@ import Social from '../components/Social.astro';
 	.main.base_width .content {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.blog_posts {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-block: 4rem 8rem;
+	}
+
+	.blog_posts .card {
+		width: 100%;
+		height: 24rem;
+		background-color: var(--c2);
+		border-radius: 0.9rem;
+		border: 0.1rem solid var(--c2-b);
 	}
 </style>

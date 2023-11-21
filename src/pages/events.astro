@@ -14,7 +14,7 @@ import CoffeeCup from "../assets/coffee-cup.png"
 	</div>
     
     <div class="shadow_ctnr">
-        <div class="ctnr">
+        <div class="ctnr reveal">
             <div class="content">
                 <h1 class="reveal_steps1">Events</h1>
     
@@ -55,8 +55,18 @@ import CoffeeCup from "../assets/coffee-cup.png"
         overflow-x: auto;
         max-width: 100%;
         min-width: clamp(20rem, 50vw, 50rem);
-        padding: 0 clamp(1rem, var(--corner-width), 8rem) 2rem;
+        padding: 0 var(--corner-width) 2rem clamp(1rem,var(--corner-width),8rem);
         flex: 1;
+    }
+
+    .events_row .card {
+        background-color: var(--c2);
+        border-radius: 1.8rem;
+        min-width: clamp(10rem,75vw,38rem);
+        height: clamp(30rem,110vw,53rem);
+        border: 0.1rem solid var(--c2-a);
+        position: relative;
+        transition: border-color 0.5s ease;
     }
 
     .events_row.soon .card::after {
@@ -71,17 +81,6 @@ import CoffeeCup from "../assets/coffee-cup.png"
         font-size: 1.4rem;
         color: var(--light-a);
         opacity: 0.6;
-    } 
-
-    .events_row .card {
-        background-color: rgb(32 29 32 / 40%);
-        border-radius: 1.8rem;
-        min-width: clamp(10rem,75vw,38rem);
-        height: clamp(30rem,110vw,53rem);
-        backdrop-filter: blur(1.6rem);
-        border: 0.1rem solid var(--c2-a);
-        position: relative;
-        transition: border-color 0.5s ease;
     }
 
     .events_row:not(.soon) .card:hover {
