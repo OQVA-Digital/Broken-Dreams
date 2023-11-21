@@ -39,7 +39,60 @@ declare global {
     }
 </script>
 
-<script src="../scripts/scrollreveal.min.js"></script>
+<!-- <script src="../scripts/scrollreveal.min.js"></script> -->
+
+<script is:inline src="/scripts/scrollreveal.min.js"></script>
+
+<script>
+
+    const generalDelay = 200;
+    
+    ScrollReveal().reveal('.reveal', {
+        distance: '1rem',
+        origin: 'bottom',
+        opacity: 0,
+        duration:900,
+        easing: 'ease',
+        delay:generalDelay,
+    });
+    
+    ScrollReveal().reveal('.reveal_bg', {
+        distance: '12rem',
+        origin: 'left',
+        opacity: 0,
+        duration:8000,
+        easing: 'ease',
+    });
+    
+    ScrollReveal().reveal('.reveal_steps1', {
+        distance: '50px',
+        origin: 'bottom',
+        opacity: 0,
+        duration:1200,
+        easing: 'ease',
+        interval:100,
+        delay:generalDelay,
+    });
+    
+    ScrollReveal().reveal('.reveal_steps2', {
+        distance: '1rem',
+        origin: 'bottom',
+        opacity: 0,
+        duration:1300,
+        easing: 'ease',
+        interval:100,
+        delay:generalDelay,
+    });
+    
+    ScrollReveal().reveal('.reveal_2', {
+        distance: '3rem',
+        origin: 'bottom',
+        opacity: 0,
+        duration:1500,
+        easing: 'ease',
+        delay:1500,
+    });
+</script>
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />

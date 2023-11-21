@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from "astro:assets"
+import Bg from "../assets/van-bgs/dream.png"
+import CoffeeCup from "../assets/coffee-cup.png"
+
+---
+
+<Layout title="Events - Broken Dreams Coffee">
+
+	<div class="bg_ctnr">
+		<Image src={Bg} alt="" class="bg reveal_bg" />
+	</div>
+    
+    <div class="shadow_ctnr">
+        <div class="ctnr">
+            <div class="content">
+                <h1 class="reveal_steps1">Events</h1>
+    
+                <p class="reveal_steps1">Coming soon</p>
+    
+                <hr class="reveal_steps1">
+            </div>
+    
+            <div class="events_row soon">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .shadow_ctnr > .ctnr {
+        /* min-height: 100vh; */
+        position: relative;
+        padding-top: calc(var(--header-height) * 1.5);
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        gap: clamp(1rem,4vw,6rem);
+    }
+
+    .shadow_ctnr .content {
+        padding-left: var(--corner-width);
+    }
+
+    .events_row {
+        display: flex;
+        gap: clamp(1.6rem,3vw,3rem);
+        overflow-x: auto;
+        max-width: 100%;
+        min-width: clamp(20rem, 50vw, 50rem);
+        padding: 0 clamp(1rem, var(--corner-width), 8rem) 2rem;
+        flex: 1;
+    }
+
+    .events_row.soon .card::after {
+        content: "upcoming event";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: var(--light-a);
+        opacity: 0.6;
+    } 
+
+    .events_row .card {
+        background-color: rgb(32 29 32 / 40%);
+        border-radius: 1.8rem;
+        min-width: clamp(10rem,75vw,38rem);
+        height: clamp(30rem,110vw,53rem);
+        backdrop-filter: blur(1.6rem);
+        border: 0.1rem solid var(--c2-a);
+        position: relative;
+        transition: border-color 0.5s ease;
+    }
+
+    .events_row:not(.soon) .card:hover {
+        border-color: var(--light-a);
+        transition: border-color 0.1s ease;
+    }
+</style>

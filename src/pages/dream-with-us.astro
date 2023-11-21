@@ -29,12 +29,12 @@ const myFade = {
 ---
 
 <Layout title="Dream With Broken Dreams">
-	<section class="intro">
+	<section class="intro shadow_ctnr">
 		<div class="bg_ctnr">
 			<Image src={Bg} alt="" class="bg reveal_bg" />
 		</div>
 
-		<div class="base_width reveal">
+		<div class="main base_width reveal">
 			<div class="flex">
 				<div class="content">
 					<h1 class="reveal_steps1">Dream With Us</h1>
@@ -83,6 +83,10 @@ const myFade = {
     	font-size: clamp(1rem,18vw,12rem);
 	}
 
+	.intro {
+    	/* padding-bottom: 10rem; */
+	}
+
 	.intro .content {
     	max-width: 53rem;
 	}
@@ -101,7 +105,7 @@ const myFade = {
 		max-width: 70rem;
 		gap: 2rem;
     	align-content: flex-start;
-		margin-bottom: 5rem;
+		/* margin-bottom: 5rem; */
 	}
 
 	.bullet_boxes li {

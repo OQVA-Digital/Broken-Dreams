@@ -1,26 +1,57 @@
 ---
-
     import LinkedIn from "./vectors/LinkedIn.astro";
     import Instagram from "./vectors/Instagram.astro";
     import Twitter from "./vectors/Twitter.astro";
-
-    import '../styles/social.css'
 ---
 
-<div class="social">
-    <h2>Follow the Journey</h2>
+<div class="icons">
+    <a href="#" class="icon">
+        <Instagram/>
+    </a>
 
-    <div class="icons">
-        <a href="#" class="icon instagram">
-            <Instagram/>
-        </a>
-    
-        <a href="#" class="icon Twitter">
-            <Twitter/>
-        </a>
-    
-        <a href="#" class="icon LinkedIn">
-            <LinkedIn/>
-        </a>
-    </div>
+    <a href="#" class="icon">
+        <Twitter/>
+    </a>
+
+    <a href="#" class="icon">
+        <LinkedIn/>
+    </a>
 </div>
+
+<style>
+    .social {
+        padding: 2rem 3rem;
+        width: var(--width-1);
+        margin-inline: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    
+    .social p {
+    
+    }
+    
+    .icons {
+        display: flex;
+        position: relative;
+        left: 0;
+        right: 0;
+        gap: 0.6rem;
+    } 
+    
+    .icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        padding: 0.5rem;
+    }
+
+    @media screen and (min-width:700px) {
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+</style>

@@ -16,44 +16,45 @@ import OQVABadge from '../components/OQVABadge.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, } from "../consts";
 
-import { slide } from 'astro:transitions';
+// import { slide } from 'astro:transitions';
 
-import { ViewTransitions } from 'astro:transitions';
+// import { ViewTransitions } from 'astro:transitions';
 
-const slideAnimation = {
-  old: {
-    name: "slideOut", // same name as the keyframe in layouts/Main
-    duration: "0.8s",
-    easing: "ease",
-    fillMode: "forwards",
-  },
-  new: {
-    name: "slideIn",
-    duration: "1s",
-    easing: "ease",
-    fillMode: "backwards",
-  },
-};
+// const slideAnimation = {
+//   old: {
+//     name: "slideOut",
+//     duration: "0.7s",
+//     easing: "ease",
+//     fillMode: "forwards",
+//   },
+//   new: {
+//     name: "slideIn",
+//     duration: "1.2s",
+//     easing: "ease",
+//     fillMode: "backwards",
+//   },
+// };
 
-const bounce = {
-  forwards: slideAnimation,
-  backwards: slideAnimation,
-};
+// const bounce = {
+//   forwards: slideAnimation,
+//   backwards: slideAnimation,
+// };
 ---
 
 <!doctype html>
 <html lang="en">
-	<ViewTransitions />
+	<!-- <ViewTransitions /> -->
 	
 	<BaseHead title={title ? title : SITE_TITLE} description={description ? description : SITE_DESCRIPTION}/>
 	<body>
 		<Header transition:persist/>
 
-		<main transition:animate={bounce}>
+		<!-- <main transition:animate={bounce}> -->
+		<main>
 			<slot />
 		</main>
 
-		<!-- <Footer/> -->
+		<Footer/>
 	</body>
 
 	<!-- <CookieConsentBanner></CookieConsentBanner> -->
@@ -61,7 +62,7 @@ const bounce = {
 	<!-- <OQVABadge/> -->
 </html>
 
-<style is:global>
+<!-- <style is:global>
 	@keyframes slideOut {
 		0% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,7 +70,7 @@ const bounce = {
 			opacity: 1;
 		} 100% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transform: translate3d(-100vw, 0, 0);
+			transform: translate3d(-150vw, 0, 0);
 			opacity: 0;
 		}
 	}
@@ -77,10 +78,10 @@ const bounce = {
 	@keyframes slideIn {
 		0% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transform: translate3d(100vw, 0, 0);
+			transform: translate3d(150vw, 0, 0);
 		} 100% {
 			animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			transform: translate3d(0, 0, 0);
 		}
 	}
-  </style>
+  </style> -->

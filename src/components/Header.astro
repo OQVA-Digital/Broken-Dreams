@@ -1,13 +1,13 @@
 ---
 
 import Logo from "./vectors/logo-reduced.astro";
-import Logotype from "./vectors/Logotype.astro"
 
 import "../styles/header.css"
 
-import LinkedIn from "./vectors/LinkedIn.astro";
-import Instagram from "./vectors/Instagram.astro";
-import Twitter from "./vectors/Twitter.astro";
+import Home from "./vectors/Home.astro";
+import Events from "./vectors/Events.astro";
+import Journey from "./vectors/Journey.astro";
+import Message from "./vectors/Message.astro";
 
 ---
 
@@ -29,35 +29,24 @@ import Twitter from "./vectors/Twitter.astro";
 
 <nav>
     <div class="ctnr">
-        <a href="/">Home</a>
-        <a href="/dream-with-us">Dream with us</a>
-        <a href="/taste-authenticity">Taste authenticity</a>
-        <a href="/savor-the-dream">Savor the dream</a>
+        <a href="/"><Home/>Home</a>
 
-        <div class="social">
-            <p>Follow the Journey</p>
-        
-            <div class="icons">
-                <a href="#" class="icon">
-                    <Instagram/>
-                </a>
-            
-                <a href="#" class="icon">
-                    <Twitter/>
-                </a>
-            
-                <a href="#" class="icon">
-                    <LinkedIn/>
-                </a>
-            </div>
-        </div>
+        <hr>
 
-        <a href="/contact/">Contact us</a>
+        <a href="/events/"><Events/>Events</a>
+
+        <hr>
+
+        <a href="/follow-the-journey/"><Journey/>Follow the Journey</a>
+
+        <hr>
+
+        <a href="/contact/"><Message/>Contact us</a>
     </div>
 </nav>
 
 <script>
-	document.addEventListener('astro:page-load', () => {
+	// document.addEventListener('astro:page-load', () => {
         const menuBt = document.querySelector(".hambt");
         const nav = document.querySelector("nav");
         const navBts = document.querySelectorAll("nav a");
@@ -92,5 +81,5 @@ import Twitter from "./vectors/Twitter.astro";
             });
         }
         
-	}, { once: false });
+	// }, { once: false });
 </script>

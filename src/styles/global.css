@@ -1,4 +1,4 @@
-html.sr .reveal, html.sr .reveal_steps1,  html.sr .reveal_steps2, html.sr .reveal_bg {
+html.sr .reveal, html.sr .reveal_steps1,  html.sr .reveal_steps2, html.sr .reveal_bg, html.sr .reveal_2 {
     visibility: hidden;
 }
 
@@ -6,6 +6,7 @@ html.sr .reveal, html.sr .reveal_steps1,  html.sr .reveal_steps2, html.sr .revea
     --light: #ffedbd;
     --light-a: #e5d5b0;
     --light-b:navajowhite;
+    --light-c:#ffe09a;
 
     --dark:#000000;
 
@@ -16,6 +17,8 @@ html.sr .reveal, html.sr .reveal_steps1,  html.sr .reveal_steps2, html.sr .revea
     --c2: #201d20;
     --c2-a:#403b40;
     --c2-b:#5f585f;
+
+    --c3:#ffd455;
 
     --max-width: 135rem;
 
@@ -127,14 +130,18 @@ video {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--light);
+    background: var(--c2);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    background: var(--c2);
-    border:0.6rem solid var(--light);
+    background: var(--light);
+    border:0.6rem solid var(--c2);
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
 }
 
 button {
@@ -205,7 +212,7 @@ noscript {
 }
 
 .cta {
-    font-size: clamp(1.5rem, 9.5vw, 3.5rem);
+    font-size: clamp(1.5rem, 9.5vw, 4rem);
     width: fit-content;
     padding-right: clamp(1.6rem, 9vw, 4.5rem);
     line-height: 1;
@@ -247,6 +254,86 @@ noscript {
 .main.cta {
 
 }
+
+
+
+
+
+/* CUSTOMS */
+
+.shadow_ctnr {
+    background-image: linear-gradient(120deg, var(--c2) 24%, transparent 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.bg_ctnr {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+    left:0;
+    /* top:calc(var(--header-height) + 0.1rem); */
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.bg {
+    height: 100vh;
+    width: calc(100vw + 12rem);
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -1;
+    position: absolute;
+    right: -12rem;
+    max-width: unset;
+}
+
+.main.base_width {
+    min-height: 100vh;
+    position: relative;
+    padding-top: calc(var(--header-height) * 1.5);
+    box-sizing: border-box;
+}
+
+.main.base_width.flex {
+    flex-flow: row wrap;
+    align-content: baseline;
+}
+
+h1 {
+    font-weight: 600;
+    color: var(--c3);
+    line-height: 1;
+    font-size: clamp(1rem,15vw,12rem);
+}
+
+h1 + p {
+    font-size: clamp(1rem, 4.2vw, 1.65rem);
+    line-height: 1.65;
+    font-weight: 200;
+    max-width: clamp(10rem, 80vw, 51rem);
+    margin-block: clamp(1rem, 5vw, 2rem);
+}
+
+h1 + p b, h1 + p strong {
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes slideOut {
     0% {
